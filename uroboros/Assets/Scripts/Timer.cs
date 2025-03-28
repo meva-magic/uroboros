@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float startTime;
+    
+    [SerializeField] private float timeLeft;
+
+    private void Start()
     {
-        
+        timeLeft = startTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate() 
     {
-        
+        timeLeft -= 1f;
     }
 }
